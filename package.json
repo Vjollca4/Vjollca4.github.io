@@ -1,0 +1,10 @@
+{
+  "name": "learn-in-public",
+  "version": "1.0.0",
+  "description": "Learn in Public - Developer Journey",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "type": "commonjs"
+}
