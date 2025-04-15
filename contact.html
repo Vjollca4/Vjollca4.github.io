@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Learn in Public</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="logo">📚</span>
+            <span>Learn in Public</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="daily.html">Daily Logs</a>
+            <a href="contact.html" class="active">Contact</a>
+            <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="contact-section">
+            <h1>Get in Touch</h1>
+            <p class="contact-intro">Have questions about my learning journey? Want to connect? Drop me a message!</p>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Learn in Public. Built with 💡 by Vjollca Ademi</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

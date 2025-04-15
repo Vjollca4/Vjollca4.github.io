@@ -1,0 +1,44 @@
+# Building a User Profile Microservice with Node.js
+
+## Today's Progress 🚀
+**Date**: April 15, 2025 
+**Project**: User Profile Microservice  
+**Tech Stack**: Node.js, Express, JWT  
+
+Today I built a functional user profile microservice with secure authentication and profile management endpoints. The system currently uses in-memory storage as I focus on core functionality before database integration.
+
+## Key Learnings 💡
+
+### 1. Authentication Flow
+```javascript
+// authController.js
+const generateToken = (user) => {
+  return jwt.sign({ id: user.id }, process.env.JWT_SECRET, { 
+    expiresIn: '1h' 
+  });
+};```
+
+### 2. Project Structure
+```
+📦 user-profile-service
+├── 📂 src
+│   ├── 📂 controllers
+│   │   ├── authController.js    # Auth logic
+│   │   └── userController.js    # Profile CRUD
+│   ├── 📂 middleware
+│   │   └── authMiddleware.js    # JWT validation
+│   ├── 📂 routes
+│   │   ├── authRoutes.js        # /login, /register
+│   │   └── userRoutes.js        # /profile
+│   └── 📂 utils
+│       ├── passwordUtils.js     # Hashing
+│       └── validation.js        # Input checks
+└── server.js                    # Entry point
+```
+## Key Takeaways
+
+1. **Middleware is powerful for cross-cutting concerns**
+
+2. **JWT provides stateless authentication but requires careful implementation**
+
+3. **Postman environment variables are essential for API testing workflows**

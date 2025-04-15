@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 - Web Components Introduction</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article class="day-entry">
+        <h1>Day 1: Introduction to Web Components</h1>
+        <time datetime="2024-03-10">March 10, 2024</time>
+        
+        <section class="content">
+            <h2>What I Learned Today</h2>
+            <p>Today I dove into Web Components, a powerful set of features for creating reusable custom elements. Here are the key concepts I explored:</p>
+            
+            <h3>1. Custom Elements</h3>
+            <ul>
+                <li>Learned how to create custom element classes</li>
+                <li>Understanding lifecycle callbacks</li>
+                <li>Implementing attributes and properties</li>
+            </ul>
+
+            <h3>2. Shadow DOM</h3>
+            <ul>
+                <li>Encapsulation of styles and markup</li>
+                <li>Creating and attaching shadow roots</li>
+                <li>Style scoping and isolation</li>
+            </ul>
+
+            <h3>3. HTML Templates</h3>
+            <ul>
+                <li>Using template tags</li>
+                <li>Content slots and composition</li>
+                <li>Dynamic template manipulation</li>
+            </ul>
+
+            <div class="code-example">
+                <h4>Example Implementation:</h4>
+                <pre><code>
+class CustomCard extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+    }
+
+    connectedCallback() {
+        this.shadowRoot.innerHTML = `
+            <style>
+                .card {
+                    padding: 20px;
+                    border: 1px solid #ccc;
+                }
+            </style>
+            <div class="card">
+                <slot></slot>
+            </div>
+        `;
+    }
+}
+
+customElements.define('custom-card', CustomCard);
+                </code></pre>
+            </div>
+
+            <section class="reflections">
+                <h3>Key Takeaways</h3>
+                <ul>
+                    <li>Web Components provide true encapsulation</li>
+                    <li>They work across different frameworks</li>
+                    <li>Browser support is now excellent</li>
+                </ul>
+            </section>
+        </section>
+    </article>
+</body>
+</html>
