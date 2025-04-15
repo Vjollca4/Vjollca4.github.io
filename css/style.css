@@ -307,23 +307,32 @@ footer p {
   transform: rotate(45deg);
 }
 
-/* Responsive Design */
+/* Mobile Menu */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
 @media (max-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr;
+  .mobile-menu-btn {
+    display: block;
   }
 
   .nav-links {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
+    height: 100vh;
     background-color: var(--nav-bg);
-    padding: 1rem;
     flex-direction: column;
-    align-items: stretch;
-    box-shadow: var(--shadow);
+    padding: 2rem;
+    gap: 1rem;
   }
 
   .nav-links.active {
@@ -331,20 +340,116 @@ footer p {
   }
 
   .nav-links a {
-    padding: 1rem;
+    width: 100%;
     text-align: center;
+    padding: 1rem;
   }
 
   .container {
     padding: 1rem;
   }
 
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .profile-card {
+    padding: 1.5rem;
+  }
+
+  .profile-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
   .hero-content {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .hero-content h2 {
     font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-section {
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  input,
+  textarea {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-brand {
+    font-size: 1.2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Daily Logs Responsive */
+@media (max-width: 1024px) {
+  .daily-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+  }
+
+  .content-viewer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .daily-container {
+    padding: 1rem;
+  }
+
+  .sidebar {
+    padding: 1rem;
+  }
+
+  .days-list {
+    max-height: 300px;
+  }
+
+  .content-viewer {
+    padding: 1rem;
+  }
+
+  .content-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    font-size: 0.9rem;
   }
 }
 
@@ -623,41 +728,6 @@ footer p {
   align-items: center;
   gap: 0.25rem;
   font-weight: 500;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .daily-container {
-    grid-template-columns: 300px 1fr;
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .daily-container {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    position: static;
-    margin-bottom: 2rem;
-  }
-
-  .days-list {
-    max-height: none;
-  }
-
-  .content-viewer {
-    padding: 1.5rem;
-  }
-
-  .content-header h1 {
-    font-size: 1.75rem;
-  }
-
-  .content {
-    font-size: 1rem;
-  }
 }
 
 .calendar-container {
