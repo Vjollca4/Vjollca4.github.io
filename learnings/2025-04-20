@@ -1,0 +1,60 @@
+# 🗺️ Learn in Public – Destination Module Work (Kosova Travel Guide)
+
+## 📅 What I Learned Today
+
+Today I worked on the **Destinations** section of my `Kosova Travel Guide` project. This feature allows users to explore detailed travel information about various locations in Kosovo. I used a structured admin form to input new destinations and wrote both short and long descriptions, selected images, assigned geographic coordinates, and created lists of things to do per destination.
+
+---
+
+## ✅ Key Things I Did
+
+- Entered structured data for destinations using fields like:
+  - `name`, `slug`, `region`
+  - `latitude` / `longitude`
+  - `shortDescription` / `longDescription`
+  - `attributes` (tags like city, nature, peaceful)
+  - `thingsToDo` in the format `Title:Description`
+  - `imageUrls`
+
+- Added and described destinations including:
+  - **Leran in Publicë**
+  - **Batlava Lake**
+  - **Mitrovica**
+  - **Prekaz**
+  - **Gjeravica & Bjeshkët e Nemuna**
+
+- Wrote short and long descriptions based on visual content from field photos and research  
+- Applied proper formatting for structured data to ensure frontend compatibility  
+
+---
+
+## 🧩 Example Destination Entry Format
+
+```js
+{
+  id: "mitrovica",
+  name: "Mitrovica",
+  slug: "mitrovica",
+  region: "Northern Kosovo",
+  image: "https://example.com/mitrovica.jpg",
+  shortDescription: "A divided city with rich history and cultural resilience.",
+  longDescription: "Mitrovica is a unique city divided by the Ibar River, with strong symbolism and history...",
+  latitude: "42.8872",
+  longitude: "20.8675",
+  attributes: ["city", "historical", "cultural", "divided"],
+  thingsToDo: [
+    "Cross the Ibar Bridge:See the divide between North and South",
+    "Visit the city museum:Learn about the past and future of Mitrovica",
+    "Explore the green market:Interact with local daily life"
+  ],
+  imageUrls: [
+    "https://example.com/mitrovica1.jpg"
+  ]
+}
+
+## 🔧 What I Improved Today
+
+- ✨ Wrote **clean, reusable destination objects** for easier integration with the frontend or backend API.
+- 📝 Practiced **content writing** that balances tourist appeal with structured data formatting.
+- 🔁 Improved **consistency** across all destination entries (naming, slug formatting, attributes, image URLs).
+- 🔄 Aligned **frontend UI needs** with backend-compatible JSON formats (e.g., thingsToDo, image arrays).
